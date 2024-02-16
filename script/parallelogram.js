@@ -8,8 +8,7 @@ function calculateParallalogranArea(){
     const area = (base * height);
     console.log ('area of the parallelogram=',area)
 
-    const result = document.getElementById('parallelogram-area');
-    result.innerHTML = area;
+    setInnerTextById('parallelogram-area', area)
 
 }
 
@@ -19,4 +18,9 @@ function getInputValueById(inputFieldId){
     const inputValue = parseFloat(inputFieldText);
     // console.log(inputValue)
     return inputValue
+}
+
+function setInnerTextById(elementId, area){
+    const element = document.getElementById(elementId);
+    element.innerText = area;
 }
